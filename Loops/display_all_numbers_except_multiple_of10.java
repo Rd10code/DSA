@@ -21,4 +21,5 @@ public class display_all_numbers_except_multiple_of10 {
 
         sc.close();
     }
+    // this is comment
 }
