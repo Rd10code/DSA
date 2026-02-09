@@ -7,6 +7,6 @@ public class pass_or_fail {
 
         String result = (marks>33)?"Pass":"Fail";
         System.out.print(result);
-
+        sc.close();
     }
 }

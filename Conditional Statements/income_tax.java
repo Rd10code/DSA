@@ -38,5 +38,8 @@ public class income_tax {
             // System.out.print(tax);
         }
         System.out.print("U have to pay "+tax);
+        sc.close();
     }
+
+    
 }

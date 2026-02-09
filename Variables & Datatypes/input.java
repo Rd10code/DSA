@@ -7,5 +7,6 @@ public class input{
 
         boolean floatt = sc.nextBoolean();
         System.out.println(floatt);
+        sc.close();
     }
 }

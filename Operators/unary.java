@@ -14,6 +14,6 @@ public class unary {
         int b =++a;
         System.out.println(a);
         System.out.println(b);
-
+        sc.close();
     }
 }

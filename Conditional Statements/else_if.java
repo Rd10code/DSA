@@ -12,5 +12,6 @@ public class else_if {
         }else{
             System.out.print("No U can't Drive");
         }
+        sc.close();
     }
 }

@@ -8,6 +8,7 @@ public class area_of_circle {
 
         float area = pi*b*b;
         System.out.print(area);
+        sc.close();
 
 
     }

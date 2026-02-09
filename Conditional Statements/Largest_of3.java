@@ -14,5 +14,6 @@ public class Largest_of3 {
         }else{
             System.out.print("C");
         }
+        sc.close();
     }
 }

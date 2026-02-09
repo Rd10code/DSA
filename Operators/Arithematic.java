@@ -10,5 +10,6 @@ public class Arithematic {
         System.out.println("Multiply " + (a*b));
         System.out.println("division " + (a/b));
         System.out.println("modulo " + (b%a));
+        sc.close();
     }
 }

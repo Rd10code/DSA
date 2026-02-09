@@ -9,5 +9,7 @@ public class oddeven {
         }else{
             System.out.print("odd");
         }
+        sc.close();
     }
+    
 }

@@ -29,5 +29,6 @@ public class q3 {
             default:
                 System.out.print("Invalid ");
         }
+        sc.close();
     }
 }

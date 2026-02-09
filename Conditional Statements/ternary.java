@@ -10,5 +10,7 @@ public class ternary {
         int num = sc.nextInt();
         String type = (num%2==0)?"Even":"Odd";
         System.out.print(type);
+        sc.close();
        }
+       
 }

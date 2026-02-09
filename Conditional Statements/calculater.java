@@ -26,5 +26,6 @@ public class calculater {
                 System.out.print("Wrong Operations");
                 
         }
+        sc.close();
     }
 }

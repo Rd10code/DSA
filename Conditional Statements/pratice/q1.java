@@ -10,6 +10,6 @@ public class q1 {
         }else{
             System.out.print("The number you have entered is Negative");
         }
-
+        sc.close();
     }
 }
