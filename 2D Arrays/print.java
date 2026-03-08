@@ -14,8 +14,15 @@ public class print {
     }
 
 
-    public static int search(matrixs[][],key){
-        
+    public static boolean search(int matrixs[][],int key){
+        for(int i=0;i<matrixs.length;i++){
+            for(int j=0;j<matrixs[0].length;j++){
+                if(matrixs[i][j]==key){
+                    System.out.print("Your key is at ("+i+","+j+")");
+                }
+            }
+        }
+        return true;
     }
     public static void main(String[] args) {
         int matrix[][]=new int[3][3];
@@ -38,6 +45,10 @@ public class print {
         int lar = lar_small(matrix);
         System.out.print(lar+ "is the largest number in the whole matrix");
         sc.close();
+
+        search(matrix, 8);
     }
 
 }
+
+
