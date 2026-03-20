@@ -7,5 +7,6 @@ public class strings{
 
         //Strings are immutable
         Scanner sc = new Scanner(System.in);
+        sc.close(); 
     }
 }
