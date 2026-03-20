@@ -13,9 +13,14 @@ public class strings{
         line = sc.nextLine();
         System.out.println("Your name is " + name);
         System.out.println(line);
-        sc.close(); 
-
+        
         //Length
         System.out.print(line.length());
+        
+        //contatention
+        String First_name = sc.next();
+        String last_name = sc.next();
+        System.out.println(First_name+" "+last_name);
+        sc.close(); 
     }
 }
