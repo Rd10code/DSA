@@ -1,8 +1,11 @@
+import java.util.*;
 public class toUppercase {
     public static String touppercase(String str){
         StringBuilder sb = new StringBuilder("");
 
+        
         char ch = Character.toUpperCase(str.charAt(0));
+        sb.append(ch);
         for(int i=1;i<str.length();i++){
             if(str.charAt(i)== ' ' && i<str.length()-1){
                 sb.append(str.charAt(i));
@@ -14,8 +17,18 @@ public class toUppercase {
         }
         return sb.toString();
     }
+    
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
         String srt = "hi i am rohit";
-        System.out.print(touppercase(srt));
+        System.out.println(touppercase(srt));
+
+        System.out.print("Enter Your Name ");
+        String sen =sc.nextLine();
+        System.out.print(touppercase(sen));
+
+        sc.close();
+
     }
 }
