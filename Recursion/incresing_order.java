@@ -5,6 +5,8 @@ public class incresing_order {
 
 
         
+
+
     }
 }
 
