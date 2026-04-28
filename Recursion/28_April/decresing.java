@@ -65,6 +65,17 @@ public class decresing {
     System.out.println(name);
     names(n-1 , name);
    }
+
+   //Check if the array is sorted or not
+   public static boolean isSorted(int arr[], int i){
+        if( i== arr.length-1){
+           return true;
+        }
+        if(arr[i]>arr[i+1]){
+           return false;
+        }
+        return isSorted(arr, i+1);
+   }
     public static void main(String[] args) {
         // decred(10);
         // Rec_decrese(10);
@@ -73,7 +84,9 @@ public class decresing {
         // natural(10);
         // int ans = Fib(5);
         // System.out.print(ans);
-        names(4, "Rohit");
+        // names(4, "Rohit");
+        int arr[] ={1,2,3,4,5};
+        System.out.print(isSorted(arr, 0));
         
     }
 }
