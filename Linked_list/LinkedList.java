@@ -160,22 +160,78 @@ public class LinkedList{
         }
         head=prev;
     }
+
+    //Slow Fast Approch
+    public Node FindMid(Node head){  // Helper Function
+        Node slow = head;
+        Node fast = head;
+        
+        while(fast!=null &&fast.next!=null){
+            slow = slow.next;  //+1
+            fast = fast.next.next; //+2
+        }
+        return slow;// middle
+    }
+
+    public boolean checkpallidrome(){
+        if(head==null || head.next==null){
+            return true;
+        }
+        //step 1 : Find mid
+
+        Node midNode = FindMid(head);
+
+        //Step 2 : Reverse 2nd half
+        Node prev = null;
+        Node curr = midNode;
+        Node next;
+
+        while(curr!=null){
+            next =curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=next;
+        }
+
+        Node right = prev;  //Right hald head
+        Node left = head;
+        //Step 3 :  check if both are equal
+
+        while(right!=null){
+            if(left.data!=right.data){
+                return false;
+            }
+            left = left.next;
+            right = right.next;
+        }
+        return true;
+
+    }
+
     public static void main(String[] args) {
-        LinkedList ll = new LinkedList();
-        ll.addFirst(2);
-        ll.addFirst(1);
-        ll.addLast(4);
-        ll.addLast(5);
-        ll.add(2,3);
-        ll.add(3,6);
-        ll.print();
+        // LinkedList ll = new LinkedList();
+        // ll.addFirst(2);
+        // ll.addFirst(1);
+        // ll.addLast(4);
+        // ll.addLast(5);
+        // ll.add(2,3);
+        // ll.add(3,6);
+        // ll.print();
 
-        ll.reverse();
-        ll.print();
+        // ll.reverse();
+        // ll.print();
 
 
-        System.out.println(ll.recsearch(3));
-        System.out.println(ll.recsearch(10));
+        // System.out.println(ll.recsearch(3));
+        // System.out.println(ll.recsearch(10));
+
+        LinkedList lll = new LinkedList();
+        lll.addLast(1);
+        lll.addLast(2);
+        lll.addLast(3);
+        lll.addLast(1);
+
+        System.out.println(lll.checkpallidrome());
 
         // System.out.println(ll.size);
         // ll.removeFirst();
