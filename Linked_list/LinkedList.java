@@ -208,7 +208,35 @@ public class LinkedList{
 
     }
 
+    public static boolean cycle(){
+        Node slow = head;
+        Node fast = head;
+
+        while(fast!= null && fast.next!=null){
+            slow = slow.next;
+            fast = fast.next.next;
+
+            if(slow==fast){
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
+
+        // Cycle/ LOOP
+        head = new Node(1);
+        head.next =new Node(2);
+        head.next.next = new Node(3);
+        // head.next.next.next = head;
+
+        System.out.println(cycle());
+        // 1->2->3->1
+
+
+
+
         // LinkedList ll = new LinkedList();
         // ll.addFirst(2);
         // ll.addFirst(1);
@@ -225,13 +253,13 @@ public class LinkedList{
         // System.out.println(ll.recsearch(3));
         // System.out.println(ll.recsearch(10));
 
-        LinkedList lll = new LinkedList();
-        lll.addLast(1);
-        lll.addLast(2);
-        lll.addLast(3);
-        lll.addLast(1);
+        // LinkedList lll = new LinkedList();
+        // lll.addLast(1);
+        // lll.addLast(2);
+        // lll.addLast(3);
+        // lll.addLast(1);
 
-        System.out.println(lll.checkpallidrome());
+        // System.out.println(lll.checkpallidrome());
 
         // System.out.println(ll.size);
         // ll.removeFirst();
